@@ -4,6 +4,7 @@ pipeline {
         stage('Build User Service') {
             steps {
                 dir('user-service') {
+                    sh 'whoami'
                     echo "Building User Service..."
                     sh 'docker build -t user-service:latest .'
                 }
