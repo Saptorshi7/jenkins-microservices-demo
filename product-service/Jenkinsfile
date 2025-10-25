@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    tools {nodejs "nodejs"}
+
     environment {
         APP_NAME = "product-service"
         DOCKER_IMAGE = "your-dockerhub-username/${APP_NAME}"
